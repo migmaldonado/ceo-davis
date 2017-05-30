@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.landingpage {
+  /*background-image: url("https://media.giphy.com/media/Xny5DgDlX0jss/giphy.gif");*/
+  background-image: url("public/images/index-banner.jpeg");
+  background-size:100%;
+  display: block;
+  text-align: center;
+}
