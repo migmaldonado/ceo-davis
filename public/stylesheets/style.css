@@ -9,8 +9,32 @@ a {
 
 .landingpage {
   /*background-image: url("https://media.giphy.com/media/Xny5DgDlX0jss/giphy.gif");*/
-  background-image: url("public/images/index-banner.jpeg");
+  background-image: url("https://static.pexels.com/photos/348323/pexels-photo-348323.jpeg");
+  /*background-image: url("public/images/index-banner.jpeg");*/
   background-size:100%;
   display: block;
   text-align: center;
+}
+
+table caption {
+	padding: .5em 0;
+}
+
+table.dataTable th,
+table.dataTable td {
+  white-space: nowrap;
+}
+
+
+.sidebyside {
+display:inline-block;
+}
+
+.floatdiv {
+  float: right;
+  width: 80px;
+}
+
+.floatrightdiv {
+  float: right;
 }

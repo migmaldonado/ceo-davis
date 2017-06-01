@@ -1,7 +1,7 @@
 <h3> Decisioners in this project
 </h3>
 
-<ul>
+<!-- <ul>
   <% decisioners.forEach((oneUser) => { %>
     <li>
       <h3> <%= oneUser.name %> </h3> <a href="/decisioners/edit/<%= oneUser._id %>">   [Edit]</a>
@@ -14,7 +14,84 @@
 
     </li>
   <% }) %>
-</ul>
+</ul> -->
+
+    <!-- <table style="width:80%">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Admin Flag</th>
+      </tr>
+      <% decisioners.forEach((oneUser) => { %>
+      <tr>
+        <td><%= oneUser.name %></td>
+        <td><%= oneUser.email %></td>
+        <td><%= oneUser.isAdmin %></td>
+      </tr>
+      <% }) %>
+    </table> -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <table summary="This table shows how to create responsive tables using Datatables' extended functionality" class="table table-bordered table-hover dt-responsive">
+            <caption class="text-center">An example of a responsive table based on <a href="https://datatables.net/extensions/responsive/" target="_blank">DataTables</a>:</caption>
+
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Admin Flag</th>
+                <th>Options</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% decisioners.forEach((oneUser) => { %>
+              <tr>
+                <td><%= oneUser.name %></td>
+                <td><%= oneUser.email %></td>
+                <td><%= oneUser.isAdmin %></td>
+                <td>
+                    <div class="floatdiv">
+                      <button type="submit"><a href="/decisioners/edit/<%= oneUser._id %>">Edit</a></button>
+                    </div>
+                    <div class="floatdiv">
+                      <form action="/decisioners/delete/<%= oneUser._id %>" method="post">
+                        <button type="submit">Delete</button>
+                      </form>
+                    </div>
+                </td>
+              </tr>
+              <% }) %>
+            </tbody>
+
+            <!-- <thead>
+              <tr>
+                <th>Country</th>
+                <th>Languages</th>
+                <th>Population</th>
+                <th>Median Age</th>
+                <th>Area (Km²)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Argentina</td>
+                <td>Spanish (official), English, Italian, German, French</td>
+                <td>41,803,125</td>
+                <td>31.3</td>
+                <td>2,780,387</td>
+              </tr>
+            </tbody> -->
+            <tfoot>
+              <tr>
+                <td colspan="5" class="text-center"><a href="/signup"> Add an user</a></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
 
 <a href="/dashboard">
   Back to Dashboard
