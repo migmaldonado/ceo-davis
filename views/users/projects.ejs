@@ -1,0 +1,50 @@
+<h3> <%= currentUserInfo.name %>'s Projects </h3>
+
+    <div class="container rtv">
+      <div class="row">
+        <div class="col-xs-12">
+          <table summary="This table presents all your available projects" class="table table-bordered table-hover dt-responsive">
+            <caption class="text-center"><a href="/upload"> Add a project</a></caption>
+
+            <thead>
+              <tr>
+                <th class='ctrd'>Filename</th>
+                <th class='ctrd'>Timestamp</th>
+                <th class='ctrd'>Options</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% projects.forEach((oneProject) => { %>
+              <tr>
+                <td><%= oneProject.filename %></td>
+                <td class="ctrd"><%= oneProject.createdAt %></td>
+                <td>
+                    <div class="floatdiv">
+                      <form action="/projects/delete/<%= oneProject._id %>" method="post">
+                        <button type="submit">Delete</button>
+                      </form>
+                    </div>
+                    <div class="floatdiv">
+                      <button type="submit"><a href="/projects/edit/<%= oneProject._id %>" class='edit-btn blck-btn'>Edit</a></button>
+                    </div>
+                    <div class="floatdiv">
+                      <button type="submit"><a href="/projects/<%= oneProject._id %>" class='edit-btn blck-btn'>Visualize</a></button>
+                    </div>
+                </td>
+              </tr>
+              <% }) %>
+            </tbody>
+
+            <tfoot>
+              <!-- <tr>
+                <td colspan="5" class="text-center"><a href="/upload"> Add a project</a></td>
+              </tr> -->
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+
+<a href="/" class="rtv">
+  Back to Dashboard
+</a>

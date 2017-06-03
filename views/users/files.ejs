@@ -1,0 +1,23 @@
+<h2> Upload File </h2>
+
+<% if (errorMessage) { %>
+  <p class="error-message">
+    <%= errorMessage %>
+  </p>
+<% } %>
+
+<form action="/upload" method="post">
+  <div>
+    <label for="filename-input"> File Name </label>
+    <input type="text" name="filename" id="filename-input"
+      placeholder="Secret Project">
+  </div>
+
+  <div>
+    <label for="timestamp-input"> Timestamp </label>
+    <input type="text" name="timestamp" id="timestamp-input"
+      placeholder="1/1/2017">
+  </div>
+
+  <button> Upload File </button>
+</form>

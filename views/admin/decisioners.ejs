@@ -34,15 +34,15 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <table summary="This table shows how to create responsive tables using Datatables' extended functionality" class="table table-bordered table-hover dt-responsive">
-            <caption class="text-center">An example of a responsive table based on <a href="https://datatables.net/extensions/responsive/" target="_blank">DataTables</a>:</caption>
+          <table summary="" class="table table-bordered table-hover dt-responsive">
+            <!-- <caption class="text-center">An example of a responsive table based on <a href="https://datatables.net/extensions/responsive/" target="_blank">DataTables</a>:</caption> -->
 
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Admin Flag</th>
-                <th>Options</th>
+                <th class="ctrd">Name</th>
+                <th class="ctrd">Email</th>
+                <th class="ctrd">Admin Flag</th>
+                <th class="ctrd">Options</th>
               </tr>
             </thead>
             <tbody>
@@ -50,15 +50,15 @@
               <tr>
                 <td><%= oneUser.name %></td>
                 <td><%= oneUser.email %></td>
-                <td><%= oneUser.isAdmin %></td>
+                <td class="ctrd"><%= oneUser.isAdmin %></td>
                 <td>
-                    <div class="floatdiv">
-                      <button type="submit"><a href="/decisioners/edit/<%= oneUser._id %>">Edit</a></button>
-                    </div>
                     <div class="floatdiv">
                       <form action="/decisioners/delete/<%= oneUser._id %>" method="post">
                         <button type="submit">Delete</button>
                       </form>
+                    </div>
+                    <div class="floatdiv">
+                      <button type="submit"><a href="/decisioners/edit/<%= oneUser._id %>" class='edit-btn blck-btn'>Edit</a></button>
                     </div>
                 </td>
               </tr>
@@ -93,6 +93,6 @@
       </div>
     </div>
 
-<a href="/dashboard">
+<a href="/">
   Back to Dashboard
 </a>

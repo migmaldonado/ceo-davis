@@ -38,3 +38,27 @@ display:inline-block;
 .floatrightdiv {
   float: right;
 }
+
+.blck-btn{
+  color:black;
+}
+
+.ctrd{
+  text-align: center;
+}
+
+.rtv{
+  position: relative;
+}
+
+.footnote{
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  /*margin-top: 10px;*/
+  clear: both;
+}
+
+.edit-btn:hover {
+  text-decoration: none;
+}

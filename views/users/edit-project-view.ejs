@@ -1,0 +1,16 @@
+<h2>Edit <%= project.name %></h2>
+
+<form action="/projects/edit/<%= project._id %>" method="post">
+
+  <label for="edit-filename">File Name</label>
+  <br>
+  <input type="text" name="newFileName" value="<%= project.filename %>">
+  <br>
+
+  <label for="edit-timestamp">Time Stamp</label>
+  <br>
+  <input type="text" name="newTimestamp" value="<%= project.timestamp %>">
+  <br>
+
+  <button type="submit">Save Changes</button>
+</form>

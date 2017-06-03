@@ -13,6 +13,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 const authRoutes=require('./routes/auth');
 const adminRoutes=require('./routes/decisioner');
+const projRoutes=require('./routes/project');
 
 mongoose.connect('mongodb://localhost/ceo-davis');
 const app = express();
@@ -24,7 +25,7 @@ app.set('layout', 'layouts/main-layout');
 app.use(expressLayouts);
 
 // default value for title local
-app.locals.title = 'CEO DAVIS';
+app.locals.title = 'Decison Tree DaVis';
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -61,6 +62,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/', authRoutes);
 app.use('/',adminRoutes);
+app.use('/',projRoutes);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

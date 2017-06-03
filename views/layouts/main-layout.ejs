@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
-<div>
-
   <head>
-    <title><%= title %></title>
+    <title>Decision Tree DaVis</title>
+    <!-- <title><%= title %></title> -->
     <% if (isUserLoggedIn) { %>
-      <button type="submit" class="floatrightdiv"><a href="/logout"> Log Out </a></button>
+      <button type="submit" class="floatrightdiv"><a href="/logout" class='edit-btn blck-btn'> Log Out </a></button>
     <% } %>
 
 
@@ -18,12 +17,12 @@
   </head>
   <body>
     <header>
-      <h1> <a href="/"> <%= title %> </a> </h1>
+      <h1 class="ctrd"> <a href="/"> <%= title %> </a> </h1>
     </header>
 
     <%- body -%>
 
-    <footer>
+    <footer class='footnote ctrd'>
       <p> Copyright Blurb. </p>
     </footer>
 
@@ -35,5 +34,4 @@
   <script src="/javascripts/index.js"></script>
 
 </body>
-</div>
 </html>
