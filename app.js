@@ -15,7 +15,9 @@ const authRoutes=require('./routes/auth');
 const adminRoutes=require('./routes/decisioner');
 const projRoutes=require('./routes/project');
 
-mongoose.connect('mongodb://localhost/ceo-davis');
+// mongoose.connect('mongodb://localhost/ceo-davis');
+mongoose.connect(process.env.MONGODB_URI);
+
 const app = express();
 
 // view engine setup
