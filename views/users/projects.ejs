@@ -1,5 +1,7 @@
 <h3> <%= currentUserInfo.name %>'s Projects </h3>
 
+<div class="wht">
+
     <div class="container rtv">
       <div class="row">
         <div class="col-xs-12">
@@ -28,7 +30,8 @@
                       <button type="submit"><a href="/projects/edit/<%= oneProject._id %>" class='edit-btn blck-btn'>Edit</a></button>
                     </div>
                     <div class="floatdiv">
-                      <button type="submit"><a href="/projects/<%= oneProject._id %>" class='edit-btn blck-btn'>Visualize</a></button>
+                      <!-- <button type="submit"><a href="/projects/<%= oneProject._id %>" class='edit-btn blck-btn'>Visualize</a></button> -->
+                      <button type="submit"><a href="/projects/visualize" class='edit-btn blck-btn'>Visualize</a></button>
                     </div>
                 </td>
               </tr>
@@ -44,6 +47,8 @@
         </div>
       </div>
     </div>
+
+</div>
 
 <a href="/" class="rtv">
   Back to Dashboard

@@ -59,6 +59,17 @@ router.post('/projects/delete/:id', (req, res, next) => {
   });
 });
 
+// visualize
+router.get('/projects/visualize', (req, res, next) => {
+
+    // if (err) {
+    //   next(err);
+    //   return;
+    // }
+
+  res.render('users/visualize.ejs');
+});
+
 
 //edit
 router.get('/projects/edit/:id', (req, res, next) => {

@@ -1,30 +1,42 @@
-<h2> Log In </h2>
+<!-- <h2> Log In </h2> -->
 
 <% if (errorMessage) { %>
-  <p class="error-message">
+  <p class="error-message ctrd">
     <%= errorMessage %>
   </p>
 <% } %>
 
-<form action="/login" method="post">
-  <div>
-    <label for="email-input"> Email </label>
-    <input type="email" name="email" id="email-input"
-      placeholder="ceo@yourcompany.com">
-  </div>
+  <div id="wrapper">
+    <form name="login-form" action="/login" method="post" class="login-form">
+      <div class="header">
+        <h4>Login Form</h4>
+        <span>Enter your login credentials</span>
+      </div>
+<div class="content">
+      <div>
+        <label for="email-input"> Email </label>
+        <input type="email" name="email" id="email-input"
+          placeholder="ceo@yourcompany.com" class="input username">
+        <div class="user-icon"></div>
+      </div>
 
-  <div>
-    <label for="password-input"> Password </label>
-    <input type="password" name="password" id="password-input"
-      placeholder="e.g., ••••••••••••">
-  </div>
+      <div>
+        <label for="password-input"> Pwd </label>
+        <input type="password" name="password" class="input password"
+          placeholder="e.g., ••••••••••••">
+          <div class="pass-icon"></div>
+      </div>
+</div>
 
-  <button> Log In </button>
-</form>
+  <div class="footer">
+      <button> Log In </button>
+  </div>
+    </form>
+  </div>
 
 <p>
   Don't have an account?
   <a href="/signup">
-    Create an account.
+    Request access.
   </a>
 </p>

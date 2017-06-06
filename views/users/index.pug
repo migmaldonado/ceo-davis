@@ -1,0 +1,19 @@
+- generations = 8
+
+
+mixin branches(n)
+  if(n>0)
+    div
+      +branches(n-1)
+    div
+      +branches(n-1)
+
+mixin tree(n)
+  div.trunk
+    +branches(n)
+
+  div.info
+    p=n + " generations"
+    p=Math.pow(2, n+1)-1 + " divs (branches)"
+
++tree(generations)

@@ -6,7 +6,7 @@
   </p>
 <% } %>
 
-<form action="/upload" method="post">
+<form action="/upload" method="post" enctype="multipart/form-data">
   <div>
     <label for="filename-input"> File Name </label>
     <input type="text" name="filename" id="filename-input"
@@ -17,6 +17,12 @@
     <label for="timestamp-input"> Timestamp </label>
     <input type="text" name="timestamp" id="timestamp-input"
       placeholder="1/1/2017">
+  </div>
+
+  <div>
+    <label for="myfile-input"> File </label>
+    <input type="file" name="myfile" id="myfile-input"
+      placeholder="Browse to your file">
   </div>
 
   <button> Upload File </button>

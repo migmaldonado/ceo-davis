@@ -1,20 +1,352 @@
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+/*******************
+SELECTION STYLING
+*******************/
+
+::selection {
+	color: #fff;
+	background: #f676b2; /* Safari */
+}
+::-moz-selection {
+	color: #fff;
+	background: #f676b2; /* Firefox */
+}
+
+/*******************
+BODY STYLING
+*******************/
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	background: url('http://www.demo.amitjakhu.com/login-form/images/bg.png');
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight:300;
+	text-align: left;
+	text-decoration: none;
+	height: 500px;
 }
 
-a {
-  color: #00B7FF;
+bigone {
+
 }
 
-.landingpage {
-  /*background-image: url("https://media.giphy.com/media/Xny5DgDlX0jss/giphy.gif");*/
-  background-image: url("https://static.pexels.com/photos/348323/pexels-photo-348323.jpeg");
-  /*background-image: url("public/images/index-banner.jpeg");*/
-  background-size:100%;
-  display: block;
-  text-align: center;
+#wrapper {
+	/* Center wrapper perfectly */
+	width: 300px;
+	height: 400px;
+	margin: 70px auto;
 }
+
+/* Download Button (Demo Only) */
+.download {
+	display: block;
+	position: absolute;
+	float: right;
+	right: 25px;
+	bottom: 25px;
+	padding: 5px;
+
+	font-weight: bold;
+	font-size: 11px;
+	text-align: right;
+	text-decoration: none;
+	color: rgba(0,0,0,0.5);
+	text-shadow: 1px 1px 0 rgba(256,256,256,0.5);
+}
+
+.download:hover {
+	color: rgba(0,0,0,0.75);
+	text-shadow: 1px 1px 0 rgba(256,256,256,0.5);
+}
+
+.download:focus {
+	bottom: 24px;
+}
+
+/*
+.gradient {
+	width: 600px;
+	height: 600px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -300px;
+	margin-top: -300px;
+
+	background: url(http://www.demo.amitjakhu.com/login-form/images/gradient.png) no-repeat;
+}
+*/
+
+.gradient {
+	/* Center Positioning */
+	width: 600px;
+	height: 600px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -300px;
+	margin-top: -300px;
+	z-index: -2;
+
+	/* Fallback */
+	background-image: url(http://www.demo.amitjakhu.com/login-form/images/gradient.png);
+	background-repeat: no-repeat;
+
+	/* CSS3 Gradient */
+	background-image: -webkit-gradient(radial, 0% 0%, 0% 100%, from(rgba(213,246,255,1)), to(rgba(213,246,255,0)));
+	background-image: -webkit-radial-gradient(50% 50%, 40% 40%, rgba(213,246,255,1), rgba(213,246,255,0));
+	background-image: -moz-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
+	background-image: -ms-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
+	background-image: -o-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
+}
+
+/*******************
+LOGIN FORM
+*******************/
+
+.login-form {
+	width: 300px;
+	margin: 0 auto;
+	position: relative;
+
+	background: #f3f3f3;
+	border: 1px solid #fff;
+	border-radius: 5px;
+
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/*******************
+HEADER
+*******************/
+
+.login-form .header {
+	padding: 40px 30px 30px 30px;
+}
+
+.login-form .header h1 {
+	font-family: 'Bree Serif', serif;
+	font-weight: 300;
+	font-size: 28px;
+	line-height:34px;
+	color: #414848;
+	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+	margin-bottom: 10px;
+}
+
+.login-form .header span {
+	font-size: 11px;
+	line-height: 16px;
+	color: #678889;
+	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+}
+
+/*******************
+CONTENT
+*******************/
+
+.login-form .content {
+	padding: 0 30px 25px 30px;
+}
+
+/* Input field */
+.login-form .content .input {
+	width: 188px;
+	padding: 15px 25px;
+
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: #9d9e9e;
+	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+
+	background: #fff;
+	border: 1px solid #fff;
+	border-radius: 5px;
+
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+}
+
+/* Second input field */
+.login-form .content .password, .login-form .content .pass-icon {
+	margin-top: 25px;
+}
+
+.login-form .content .input:hover {
+	background: #dfe9ec;
+	color: #414848;
+}
+
+.login-form .content .input:focus {
+	background: #dfe9ec;
+	color: #414848;
+
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+}
+
+.user-icon, .pass-icon {
+	width: 46px;
+	height: 47px;
+	display: block;
+	position: absolute;
+	left: 0px;
+	padding-right: 2px;
+	z-index: -1;
+
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+}
+
+.user-icon {
+	top:153px; /* Positioning fix for slide-in, got lazy to think up of simpler method. */
+	background: rgba(65,72,72,0.75) url(http://www.demo.amitjakhu.com/login-form/images/user-icon.png) no-repeat center;
+}
+
+.pass-icon {
+	top:201px;
+	background: rgba(65,72,72,0.75) url(http://www.demo.amitjakhu.com/login-form/images/pass-icon.png) no-repeat center;
+}
+
+.content input:focus + div{
+	left: -46px;
+}
+
+/* Animation */
+.input, .user-icon, .pass-icon, .button, .register {
+	transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+}
+
+/*******************
+FOOTER
+*******************/
+
+.login-form .footer {
+	padding: 25px 30px 40px 30px;
+	overflow: auto;
+
+	background: #d4dedf;
+	border-top: 1px solid #fff;
+
+	box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+	-webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+}
+
+/* Login button */
+.login-form .footer .button {
+	float:right;
+	padding: 11px 25px;
+
+	font-family: 'Bree Serif', serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #fff;
+	text-shadow: 0px 1px 0 rgba(0,0,0,0.25);
+
+	background: #56c2e1;
+	border: 1px solid #46b3d3;
+	border-radius: 5px;
+	cursor: pointer;
+
+	box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+	-moz-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+	-webkit-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+}
+
+.login-form .footer .button:hover {
+	background: #3f9db8;
+	border: 1px solid rgba(256,256,256,0.75);
+
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.login-form .footer .button:focus {
+	position: relative;
+	bottom: -1px;
+
+	background: #56c2e1;
+
+	box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+	-moz-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+	-webkit-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+}
+
+/* Register button */
+.login-form .footer .register {
+	display: block;
+	float: right;
+	padding: 10px;
+	margin-right: 20px;
+
+	background: none;
+	border: none;
+	cursor: pointer;
+
+	font-family: 'Bree Serif', serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #414848;
+	text-shadow: 0px 1px 0 rgba(256,256,256,0.5);
+}
+
+.footer{
+	color: #3f9db8;
+}
+/*.login-form .footer .register:hover {
+	color: #3f9db8;
+}*/
+
+/*.login-form .footer .register:focus {
+	position: relative;
+	bottom: -1px;
+}*/
+
+
+
+
+h3 {
+padding-left: 10px;
+}
+
+#banner{
+  z-index: 1;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+body {
+  -webkit-perspective: 100px;
+  perspective: 100px;
+}
+
 
 table caption {
 	padding: .5em 0;
@@ -39,14 +371,16 @@ display:inline-block;
   float: right;
 }
 
-.blck-btn{
+/*.blck-btn{
   color:black;
-}
+}*/
 
 .ctrd{
   text-align: center;
 }
-
+.rght{
+  text-align: right;
+}
 .rtv{
   position: relative;
 }
@@ -59,6 +393,443 @@ display:inline-block;
   clear: both;
 }
 
-.edit-btn:hover {
+/*.edit-btn:hover {
   text-decoration: none;
+}*/
+
+
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+body {
+  perspective: 100px;
+}
+.info {
+  margin: 20px;
+  padding: 0px 20px;
+  background-color: #ccc;
+  display: inline-block;
+}
+.trunk,
+.trunk div {
+  background: #136086;
+  will-change: transform;
+  width: 25vmin;
+  height: 2.0vmin;
+  position: absolute;
+  margin-left: -2.5vmin;
+  animation-name: rot;
+  animation-duration: 11.328100000000001s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: 1.25vmin 1.25vmin;
+  animation-timing-function: ease-in-out;
+}
+.trunk.trunk,
+.trunk div.trunk {
+  bottom: 0;
+  left: 50%;
+  animation-name: rot-root;
+  animation-duration: 20s;
+}
+.trunk >div,
+.trunk div >div {
+  top: 0;
+  left: 25vmin;
+  animation-duration: calc((inherit / 2));
+}
+.trunk >div:nth-child(2),
+.trunk div >div:nth-child(2) {
+  animation-name: rot-inv;
+  animation-duration: 8.886756067432705s;
+}
+@-moz-keyframes rot {
+  from {
+    transform: rotate(20deg) scale(0.78);
+  }
+  to {
+    transform: rotate(40deg) scale(0.78);
+  }
+}
+@-webkit-keyframes rot {
+  from {
+    transform: rotate(20deg) scale(0.78);
+  }
+  to {
+    transform: rotate(40deg) scale(0.78);
+  }
+}
+@-o-keyframes rot {
+  from {
+    transform: rotate(20deg) scale(0.78);
+  }
+  to {
+    transform: rotate(40deg) scale(0.78);
+  }
+}
+@keyframes rot {
+  from {
+    transform: rotate(20deg) scale(0.78);
+  }
+  to {
+    transform: rotate(40deg) scale(0.78);
+  }
+}
+@-moz-keyframes rot-inv {
+  from {
+    transform: rotate(-40deg) scale(0.78);
+  }
+  to {
+    transform: rotate(-20deg) scale(0.78);
+  }
+}
+@-webkit-keyframes rot-inv {
+  from {
+    transform: rotate(-40deg) scale(0.78);
+  }
+  to {
+    transform: rotate(-20deg) scale(0.78);
+  }
+}
+@-o-keyframes rot-inv {
+  from {
+    transform: rotate(-40deg) scale(0.78);
+  }
+  to {
+    transform: rotate(-20deg) scale(0.78);
+  }
+}
+@keyframes rot-inv {
+  from {
+    transform: rotate(-40deg) scale(0.78);
+  }
+  to {
+    transform: rotate(-20deg) scale(0.78);
+  }
+}
+@-moz-keyframes rot-root {
+  from {
+    transform: rotate(-95deg);
+  }
+  to {
+    transform: rotate(-85deg);
+  }
+}
+@-webkit-keyframes rot-root {
+  from {
+    transform: rotate(-95deg);
+  }
+  to {
+    transform: rotate(-85deg);
+  }
+}
+@-o-keyframes rot-root {
+  from {
+    transform: rotate(-95deg);
+  }
+  to {
+    transform: rotate(-85deg);
+  }
+}
+@keyframes rot-root {
+  from {
+    transform: rotate(-95deg);
+  }
+  to {
+    transform: rotate(-85deg);
+  }
+}
+
+
+h1 {
+  color: #136086;
+}
+
+.container {
+  background: none;
+}
+
+.wht {
+  background-image: none;
+  background-color: white;
+  background: white;
+  padding: 20px 0px 5px 0px;
+}
+
+
+
+
+/*visualize*/
+.tree-split-variable{
+  text-align: center;
+  /*background:#fff;*/
+  font-size: 15pt;
+}
+
+.tree-button-container .tree-form,
+.tree-button-container .tree-form .tree-div {
+    display: inline;
+}
+
+.tree-button-container .tree-fieldset {
+    display: inline;
+    vertical-align: middle;
+}
+
+.tree-fieldset {
+  width:200px;
+  border-color: blue;
+  border-style: solid;
+
+	padding-top:10px;
+	border:1px solid blue;
+	border-radius:8px;
+	box-shadow:0 0 10px blue;
+}
+
+.tree-legend {
+  text-align: center;
+  background-color: #fff;
+ 	/*background:#fff;*/
+  font-size: 11pt;
+}
+
+.event {
+      float: left;
+      padding-right: 20px;
+      padding-left: 20px;
+}
+
+.inside-box{
+  text-align: center;
+}
+
+.tree-button-container{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tree-form {
+  height:200px;
+}
+
+
+
+
+
+
+/*button*/
+
+button {
+    display: block;
+    margin: 10px auto;
+    border: 4px solid #136086;
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-size: 14px;
+    text-align: center;
+    background: none;
+    color: #136086;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+  background: #136086;
+  color: white;
+}
+button:hover a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+button a {
+  text-decoration: none;
+  color: #136086;
+  font-weight: bold;
+}
+
+
+.vox-cardstack {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.vox-cardstack {
+  display: block;
+}
+
+
+
+
+
+#feedback-page{
+	text-align:center;
+}
+
+#form-main{
+	width:100%;
+	float:left;
+	padding-top:0px;
+}
+
+#form-div {
+	background-color:rgba(72,72,72,0.4);
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:35px;
+	padding-bottom:50px;
+	width: 450px;
+	float: left;
+	left: 50%;
+	position: absolute;
+  margin-top:30px;
+	margin-left: -260px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+
+.feedback-input {
+	color:#3c3c3c;
+	font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+}
+
+.feedback-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 3px solid #3498db;
+	color: #3498db;
+	outline: none;
+  padding: 13px 13px 13px 54px;
+}
+
+.focused{
+	color:#30aed6;
+	border:#30aed6 solid 3px;
+}
+
+/* Icons ---------------------------------- */
+#name{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#name:focus{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+	background-position: 8px 5px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email{
+	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email:focus{
+	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#comment{
+	background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	background-color:white;
+}
+
+#button-blue{
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	float:left;
+	width: 100%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	background-color: #3498db;
+	color:white;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #0493bd;
+}
+
+.submit:hover {
+	color: #3498db;
+}
+
+.ease {
+	width: 0px;
+	height: 74px;
+	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
+
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
 }
